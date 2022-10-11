@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Component, Input, Output } from 'rete';
+import { Component, Output } from 'rete';
 
 import { CountService } from '../../count.service';
 
@@ -13,27 +13,7 @@ export class CountComponent extends Component {
     super('Count');
   }
 
-  async builder(node: {
-    addInput: (arg0: Input) => {
-      (): any;
-      new (): any;
-      addInput: {
-        (arg0: Input): {
-          (): any;
-          new (): any;
-          addControl: {
-            (arg0: NumControl): {
-              (): any;
-              new (): any;
-              addOutput: { (arg0: Output): void; new (): any };
-            };
-            new (): any;
-          };
-        };
-        new (): any;
-      };
-    };
-  }) {
+  async builder(node) {
     const out = new Output('num', 'Number', numSocket);
 
     node

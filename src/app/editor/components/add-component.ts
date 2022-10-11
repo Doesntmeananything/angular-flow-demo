@@ -10,27 +10,7 @@ export class AddComponent extends Component {
     super('Add');
   }
 
-  async builder(node: {
-    addInput: (arg0: Input) => {
-      (): any;
-      new (): any;
-      addInput: {
-        (arg0: Input): {
-          (): any;
-          new (): any;
-          addControl: {
-            (arg0: NumControl): {
-              (): any;
-              new (): any;
-              addOutput: { (arg0: Output): void; new (): any };
-            };
-            new (): any;
-          };
-        };
-        new (): any;
-      };
-    };
-  }) {
+  async builder(node) {
     const inp1 = new Input('num1', 'Number', numSocket);
     const inp2 = new Input('num2', 'Number', numSocket);
     const out = new Output('num', 'Number', numSocket);

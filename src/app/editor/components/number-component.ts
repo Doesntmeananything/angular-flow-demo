@@ -9,13 +9,7 @@ export class NumComponent extends Component {
     super('Number');
   }
 
-  builder(node: {
-    addControl: (arg0: NumControl) => {
-      (): any;
-      new (): any;
-      addOutput: { (arg0: Output): any; new (): any };
-    };
-  }) {
+  builder(node) {
     const out1 = new Output('num', 'Number', numSocket);
 
     return node.addControl(new NumControl(this.editor, 'num')).addOutput(out1);
