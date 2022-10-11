@@ -1,14 +1,9 @@
 import { Component } from '@angular/core';
 
-import { nodes } from './nodes';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'angular-flow';
-
-  nodes = nodes;
 }
